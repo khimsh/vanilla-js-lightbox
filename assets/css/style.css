@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 50px;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.lightbox {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 250px;
+  grid-gap: 30px;
+}
+
+.lightbox img {
+  height: 230px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.lightbox figcaption {
+  font-style: italic;
+}
+
+/* Modal */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  display: none;
+}
+
+/* Show modal */
+.lightbox-modal.shown {
+  display: block;
+}
+
+.lightbox-modal figure {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.lightbox-modal img {
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.lightbox-modal figcaption {
+  color: #eee;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.lightbox-modal button {
+  background: transparent;
+  border-radius: 100%;
+  border: 2px solid #eee;
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  cursor: pointer;
+}
+
+.lightbox-modal button svg {
+  display: block;
+  fill: #eee;
+}
