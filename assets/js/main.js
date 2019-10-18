@@ -30,6 +30,7 @@
         </path>
     </svg>
     `;
+
     closeBtn.addEventListener('click', () => {
       document.body.removeChild(modalElement);
     });
