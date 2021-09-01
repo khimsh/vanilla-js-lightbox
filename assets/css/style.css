@@ -67,6 +67,7 @@ img {
 }
 
 .lightbox-modal figcaption {
+  margin-top: 8px;
   color: #eee;
   font-style: italic;
   font-size: 1.2rem;
@@ -74,9 +75,9 @@ img {
 }
 
 .lightbox-modal button {
-  background: transparent;
-  border-radius: 100%;
-  border: 2px solid #eee;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   display: block;
   width: 30px;
   height: 30px;
@@ -85,9 +86,8 @@ img {
   justify-content: center;
   align-items: center;
 
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  background: transparent;
+  border: none;
 
   cursor: pointer;
 }
