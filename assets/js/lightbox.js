@@ -1,8 +1,8 @@
 'use strict';
 
-const lightbox = document.querySelector('#lightbox');
+const lightboxes = document.querySelectorAll('.lightbox');
 
-const createModal = (imgSrc, imgAlt) => {
+function createModal(imgSrc, imgAlt) {
   // Create DOM elements
   const modalElement = document.createElement('div');
   modalElement.className = 'lightbox-modal';
@@ -44,9 +44,9 @@ const createModal = (imgSrc, imgAlt) => {
   });
 
   return modalElement;
-};
+}
 
-lightbox.addEventListener('click', (e) => {
+function openModal(e) {
   // Do nothing if user clicks on anything other than img tag.
   if (e.target.tagName.toLowerCase() !== 'img') {
     return;
@@ -54,4 +54,10 @@ lightbox.addEventListener('click', (e) => {
 
   // Append modal to body
   document.body.appendChild(createModal(e.target.src, e.target.alt));
+}
+
+[...lightboxes].forEach((lightbox) => {
+  lightbox.addEventListener('click', (e) => {
+    openModal(e);
+  });
 });

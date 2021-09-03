@@ -33,15 +33,16 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: 250px;
   grid-gap: 30px;
-}
-.grid__item img {
-  height: 230px;
-  width: 100%;
-  cursor: pointer;
+
+  &__item {
+    img {
+      height: 230px;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
 }
 
 .mb-md {
   margin-bottom: 2rem;
 }
-
-/*# sourceMappingURL=style.css.map */

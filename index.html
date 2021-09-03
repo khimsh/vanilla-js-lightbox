@@ -6,47 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vanilla JS Lightbox</title>
 
+    <!-- General Styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Lightbox Specific Styles -->
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
 
-    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/lightbox.js"></script>
   </head>
 
   <body>
-    <div class="lightbox" id="lightbox">
-      <figure>
+    <h1>Simplest Vanilla JS Lightbox</h1>
+
+    <div class="lightbox mb-md">
+      <figure class="grid__item">
         <img
           src="assets/images/image-1.jpg"
           alt="Walking in the streets of Japan"
         />
         <figcaption>Walking in the streets of Japan</figcaption>
       </figure>
-      <figure>
+    </div>
+
+    <div class="grid lightbox">
+      <figure class="grid__item">
         <img
+          src="assets/images/image-1.jpg"
+          alt="Walking in the streets of Japan"
+        />
+        <figcaption>Walking in the streets of Japan</figcaption>
+      </figure>
+      <figure class="grid__item">
+        <img
+          class="grid__image"
           src="assets/images/image-2.jpg"
           alt="White ceramic wall beside red concrete bricks"
         />
         <figcaption>White ceramic wall beside red concrete bricks</figcaption>
       </figure>
-      <figure>
+      <figure class="grid__item">
         <img
+          class="grid__image"
           src="assets/images/image-3.jpg"
           alt="Blue and pink abstract painting"
         />
         <figcaption>Blue and pink abstract painting</figcaption>
       </figure>
-      <figure>
-        <img src="assets/images/image-4.jpg" alt="Basket of mushrooms" />
+      <figure class="grid__item">
+        <img
+          class="grid__image"
+          src="assets/images/image-4.jpg"
+          alt="Basket of mushrooms"
+        />
         <figcaption>Basket of mushrooms</figcaption>
       </figure>
-      <figure>
+      <figure class="grid__item">
         <img
+          class="grid__image"
           src="assets/images/image-5.jpg"
           alt="House near snow capped mountains"
         />
         <figcaption>House near snow capped mountains</figcaption>
       </figure>
-      <figure>
-        <img src="assets/images/image-6.jpg" alt="Heavenly beer" />
+      <figure class="grid__item">
+        <img
+          class="grid__image"
+          src="assets/images/image-6.jpg"
+          alt="Heavenly beer"
+        />
         <figcaption>Heavenly beer</figcaption>
       </figure>
     </div>
