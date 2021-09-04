@@ -10,6 +10,7 @@ The basic markup is:
 <div class="lightbox">
   <figure>
     <img src="/img/source" alt="image alt text" />
+    <!-- figcaption is not required -->
     <figcaption>Image Description</figcaption>
   </figure>
 </div>
