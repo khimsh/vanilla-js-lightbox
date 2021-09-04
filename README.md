@@ -14,3 +14,5 @@ The basic markup is:
   </figure>
 </div>
 ```
+
+[view demo](https://khimsh.github.io/vanilla-js-lightbox/)
