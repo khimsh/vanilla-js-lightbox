@@ -9,16 +9,21 @@ function createModal(imgSrc, imgAlt) {
 
   const figure = document.createElement('figure');
   const img = document.createElement('img');
-  const figcaption = document.createElement('figcaption');
 
   // Set img and figcaption attributes
   img.src = imgSrc;
-  img.alt = imgAlt;
-  figcaption.innerText = imgAlt;
 
   // Append elements to parent modalElement
   figure.appendChild(img);
-  figure.appendChild(figcaption);
+
+  // Create & append figcaption if the image alt text is not empty
+  if (imgAlt != '') {
+    const figcaption = document.createElement('figcaption');
+    img.alt = imgAlt;
+    figcaption.innerText = imgAlt;
+    figure.appendChild(figcaption);
+  }
+
   modalElement.appendChild(figure);
 
   // Button element to close modal on click
