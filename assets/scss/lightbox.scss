@@ -10,6 +10,13 @@
   z-index: 1000000000;
 
   animation: fade-in 0.4s;
+
+  video {
+    max-width: 80vw;
+    max-height: 94%;
+    width: auto;
+    height: auto;
+  }
 }
 
 .lightbox-modal figure {
@@ -48,6 +55,7 @@
 
   background: transparent;
   border: none;
+  z-index: 10000000;
 
   cursor: pointer;
 }
@@ -55,6 +63,14 @@
 .lightbox-modal button svg {
   display: block;
   fill: #eee;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes fade-in {

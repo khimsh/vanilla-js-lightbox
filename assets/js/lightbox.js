@@ -2,7 +2,31 @@
 
 const lightboxes = document.querySelectorAll('.lightbox');
 
-function createModal(imgSrc, imgAlt) {
+[...lightboxes].forEach((lightbox) => {
+  lightbox.addEventListener('click', (e) => {
+    openModal(e);
+  });
+});
+
+function openModal(e) {
+  // Do nothing if user clicks on anything other than img tag.
+  if (
+    e.target.tagName.toLowerCase() != 'img' &&
+    e.target.tagName.toLowerCase() != 'video'
+  ) {
+    return;
+  }
+
+  if (e.target.tagName.toLowerCase() === 'img') {
+    document.body.appendChild(createImageModal(e.target.src, e.target.alt));
+  }
+
+  if (e.target.tagName.toLowerCase() === 'video') {
+    document.body.appendChild(createVideoModal(e.target.innerHTML));
+  }
+}
+
+function createImageModal(imgSrc, imgAlt) {
   // Create DOM elements
   const modalElement = document.createElement('div');
   modalElement.className = 'lightbox-modal';
@@ -51,18 +75,43 @@ function createModal(imgSrc, imgAlt) {
   return modalElement;
 }
 
-function openModal(e) {
-  // Do nothing if user clicks on anything other than img tag.
-  if (e.target.tagName.toLowerCase() !== 'img') {
-    return;
-  }
+function createVideoModal(videoSrc) {
+  const videoSource = videoSrc;
 
-  // Append modal to body
-  document.body.appendChild(createModal(e.target.src, e.target.alt));
-}
+  const modalElement = document.createElement('div');
+  modalElement.className = 'lightbox-modal';
 
-[...lightboxes].forEach((lightbox) => {
-  lightbox.addEventListener('click', (e) => {
-    openModal(e);
+  const videoWrapper = document.createElement('div');
+  videoWrapper.className = 'video-wrapper';
+
+  const video = document.createElement('video');
+  video.setAttribute('controls', true);
+
+  video.innerHTML = videoSource;
+  videoWrapper.appendChild(video);
+  modalElement.appendChild(videoWrapper);
+
+  // Button element to close modal on click
+  const closeBtn = document.createElement('button');
+  closeBtn.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 8 8"
+      >
+        <path
+          d="M16.783,9.64l-2.5,2.5-2.5-2.5-1.5,1.5,2.5,2.5-2.5,2.5,1.5,1.5,2.5-2.5,2.5,2.5,1.5-1.5-2.5-2.5,2.5-2.5Z"
+          transform="translate(-10.283 -9.64)"
+        />
+      </svg>
+    `;
+
+  modalElement.appendChild(closeBtn);
+
+  closeBtn.addEventListener('click', () => {
+    document.body.removeChild(modalElement);
   });
-});
+
+  return modalElement;
+}

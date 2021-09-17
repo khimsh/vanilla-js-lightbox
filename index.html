@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vanilla JS Lightbox</title>
 
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- General Styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Lightbox Specific Styles -->
@@ -17,14 +25,16 @@
   <body>
     <h1>Simplest Vanilla JS Lightbox</h1>
 
+    <h2>Images</h2>
+
     <div class="lightbox mb-md">
-      <figure class="grid__item">
+      <figure>
         <img src="assets/images/image-1.jpg" />
         <figcaption>Walking in the streets of Japan</figcaption>
       </figure>
     </div>
 
-    <div class="grid lightbox">
+    <div class="grid lightbox mb-md">
       <figure class="grid__item">
         <img
           src="assets/images/image-1.jpg"
@@ -44,9 +54,9 @@
         <img
           class="grid__image"
           src="assets/images/image-3.jpg"
-          alt="Blue and pink abstract painting"
+          alt="Two Brown Wooden Tables"
         />
-        <figcaption>Blue and pink abstract painting</figcaption>
+        <figcaption>Portrait Mode</figcaption>
       </figure>
       <figure class="grid__item">
         <img
@@ -72,6 +82,18 @@
         />
         <figcaption>Heavenly beer</figcaption>
       </figure>
+    </div>
+
+    <h2>Videos</h2>
+
+    <div class="grid lightbox">
+      <video class="grid__item">
+        <source src="assets/videos/video-1.mp4" type="video/mp4" />
+      </video>
+
+      <video class="grid__item">
+        <source src="assets/videos/video-2.mp4" type="video/mp4" />
+      </video>
     </div>
   </body>
 </html>
