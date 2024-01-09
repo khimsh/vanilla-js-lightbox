@@ -17,52 +17,52 @@
     width: auto;
     height: auto;
   }
-}
 
-.lightbox-modal figure {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 80vw;
-  max-height: 80vh;
-}
+  figure {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80vw;
+    max-height: 80vh;
+  }
 
-.lightbox-modal img {
-  max-width: 80vw;
-  max-height: 80vh;
-}
+  img {
+    max-width: 80vw;
+    max-height: 80vh;
+  }
 
-.lightbox-modal figcaption {
-  margin-top: 8px;
-  color: #eee;
-  font-style: italic;
-  font-size: 1.2rem;
-  text-align: center;
-}
+  figcaption {
+    margin-top: 8px;
+    color: #eee;
+    font-style: italic;
+    font-size: 1.2rem;
+    text-align: center;
+  }
 
-.lightbox-modal button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: block;
-  width: 30px;
-  height: 30px;
+  button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 30px;
+    height: 30px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  background: transparent;
-  border: none;
-  z-index: 10000000;
+    background: transparent;
+    border: none;
+    z-index: 10000000;
 
-  cursor: pointer;
-}
+    cursor: pointer;
 
-.lightbox-modal button svg {
-  display: block;
-  fill: #eee;
+    svg {
+      display: block;
+      fill: #eee;
+    }
+  }
 }
 
 .video-wrapper {
